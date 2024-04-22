@@ -41,11 +41,11 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.UpdateBtn = new System.Windows.Forms.Button();
+            this.AddBtn = new System.Windows.Forms.Button();
+            this.DelBtn = new System.Windows.Forms.Button();
+            this.ResetBtn = new System.Windows.Forms.Button();
+            this.HomeBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -158,62 +158,68 @@
             this.dataGridView1.RowTemplate.Height = 28;
             this.dataGridView1.Size = new System.Drawing.Size(896, 259);
             this.dataGridView1.TabIndex = 12;
+            this.dataGridView1.DoubleClick += new System.EventHandler(this.dataGridView1_DoubleClick);
             // 
-            // button1
+            // UpdateBtn
             // 
-            this.button1.Location = new System.Drawing.Point(218, 583);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(149, 54);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "UPDATE";
-            this.button1.UseVisualStyleBackColor = true;
+            this.UpdateBtn.Location = new System.Drawing.Point(218, 583);
+            this.UpdateBtn.Name = "UpdateBtn";
+            this.UpdateBtn.Size = new System.Drawing.Size(149, 54);
+            this.UpdateBtn.TabIndex = 13;
+            this.UpdateBtn.Text = "UPDATE";
+            this.UpdateBtn.UseVisualStyleBackColor = true;
+            this.UpdateBtn.Click += new System.EventHandler(this.UpdateBtn_Click);
             // 
-            // button2
+            // AddBtn
             // 
-            this.button2.Location = new System.Drawing.Point(40, 583);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(149, 54);
-            this.button2.TabIndex = 13;
-            this.button2.Text = "ADD";
-            this.button2.UseVisualStyleBackColor = true;
+            this.AddBtn.Location = new System.Drawing.Point(40, 583);
+            this.AddBtn.Name = "AddBtn";
+            this.AddBtn.Size = new System.Drawing.Size(149, 54);
+            this.AddBtn.TabIndex = 13;
+            this.AddBtn.Text = "ADD";
+            this.AddBtn.UseVisualStyleBackColor = true;
+            this.AddBtn.Click += new System.EventHandler(this.AddBtn_Click);
             // 
-            // button3
+            // DelBtn
             // 
-            this.button3.Location = new System.Drawing.Point(392, 583);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(149, 54);
-            this.button3.TabIndex = 14;
-            this.button3.Text = "DELETE";
-            this.button3.UseVisualStyleBackColor = true;
+            this.DelBtn.Location = new System.Drawing.Point(392, 583);
+            this.DelBtn.Name = "DelBtn";
+            this.DelBtn.Size = new System.Drawing.Size(149, 54);
+            this.DelBtn.TabIndex = 14;
+            this.DelBtn.Text = "DELETE";
+            this.DelBtn.UseVisualStyleBackColor = true;
+            this.DelBtn.Click += new System.EventHandler(this.DelBtn_Click);
             // 
-            // button4
+            // ResetBtn
             // 
-            this.button4.Location = new System.Drawing.Point(571, 583);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(149, 54);
-            this.button4.TabIndex = 15;
-            this.button4.Text = "RESET";
-            this.button4.UseVisualStyleBackColor = true;
+            this.ResetBtn.Location = new System.Drawing.Point(571, 583);
+            this.ResetBtn.Name = "ResetBtn";
+            this.ResetBtn.Size = new System.Drawing.Size(149, 54);
+            this.ResetBtn.TabIndex = 15;
+            this.ResetBtn.Text = "RESET";
+            this.ResetBtn.UseVisualStyleBackColor = true;
+            this.ResetBtn.Click += new System.EventHandler(this.ResetBtn_Click);
             // 
-            // button5
+            // HomeBtn
             // 
-            this.button5.Location = new System.Drawing.Point(776, 583);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(149, 54);
-            this.button5.TabIndex = 16;
-            this.button5.Text = "HOME";
-            this.button5.UseVisualStyleBackColor = true;
+            this.HomeBtn.Location = new System.Drawing.Point(776, 583);
+            this.HomeBtn.Name = "HomeBtn";
+            this.HomeBtn.Size = new System.Drawing.Size(149, 54);
+            this.HomeBtn.TabIndex = 16;
+            this.HomeBtn.Text = "HOME";
+            this.HomeBtn.UseVisualStyleBackColor = true;
+            this.HomeBtn.Click += new System.EventHandler(this.HomeBtn_Click);
             // 
             // MobilePhone
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1143, 716);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.HomeBtn);
+            this.Controls.Add(this.ResetBtn);
+            this.Controls.Add(this.DelBtn);
+            this.Controls.Add(this.AddBtn);
+            this.Controls.Add(this.UpdateBtn);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.comboBox1);
@@ -253,10 +259,10 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button UpdateBtn;
+        private System.Windows.Forms.Button AddBtn;
+        private System.Windows.Forms.Button DelBtn;
+        private System.Windows.Forms.Button ResetBtn;
+        private System.Windows.Forms.Button HomeBtn;
     }
 }

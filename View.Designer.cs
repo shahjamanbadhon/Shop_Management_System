@@ -32,8 +32,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.RefreshBtn = new System.Windows.Forms.Button();
+            this.HomeBtn = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -82,23 +82,23 @@
             this.textBox5.Size = new System.Drawing.Size(146, 26);
             this.textBox5.TabIndex = 28;
             // 
-            // button2
+            // RefreshBtn
             // 
-            this.button2.Location = new System.Drawing.Point(839, 100);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(98, 33);
-            this.button2.TabIndex = 30;
-            this.button2.Text = "REFRESH";
-            this.button2.UseVisualStyleBackColor = true;
+            this.RefreshBtn.Location = new System.Drawing.Point(839, 100);
+            this.RefreshBtn.Name = "RefreshBtn";
+            this.RefreshBtn.Size = new System.Drawing.Size(98, 33);
+            this.RefreshBtn.TabIndex = 30;
+            this.RefreshBtn.Text = "REFRESH";
+            this.RefreshBtn.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // HomeBtn
             // 
-            this.button1.Location = new System.Drawing.Point(958, 100);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(98, 33);
-            this.button1.TabIndex = 31;
-            this.button1.Text = "HOME";
-            this.button1.UseVisualStyleBackColor = true;
+            this.HomeBtn.Location = new System.Drawing.Point(958, 100);
+            this.HomeBtn.Name = "HomeBtn";
+            this.HomeBtn.Size = new System.Drawing.Size(98, 33);
+            this.HomeBtn.TabIndex = 31;
+            this.HomeBtn.Text = "HOME";
+            this.HomeBtn.UseVisualStyleBackColor = true;
             // 
             // label7
             // 
@@ -225,8 +225,8 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.RefreshBtn);
+            this.Controls.Add(this.HomeBtn);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
@@ -246,8 +246,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button RefreshBtn;
+        private System.Windows.Forms.Button HomeBtn;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;

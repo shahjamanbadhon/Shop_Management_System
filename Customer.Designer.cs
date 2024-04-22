@@ -42,11 +42,11 @@
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.HomeBtn = new System.Windows.Forms.Button();
+            this.ResetBtn = new System.Windows.Forms.Button();
+            this.DelBtn = new System.Windows.Forms.Button();
+            this.AddBtn = new System.Windows.Forms.Button();
+            this.UpdateBtn = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -166,50 +166,50 @@
             this.textBox5.Size = new System.Drawing.Size(146, 26);
             this.textBox5.TabIndex = 26;
             // 
-            // button5
+            // HomeBtn
             // 
-            this.button5.Location = new System.Drawing.Point(790, 605);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(170, 54);
-            this.button5.TabIndex = 32;
-            this.button5.Text = "HOME";
-            this.button5.UseVisualStyleBackColor = true;
+            this.HomeBtn.Location = new System.Drawing.Point(790, 605);
+            this.HomeBtn.Name = "HomeBtn";
+            this.HomeBtn.Size = new System.Drawing.Size(170, 54);
+            this.HomeBtn.TabIndex = 32;
+            this.HomeBtn.Text = "HOME";
+            this.HomeBtn.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // ResetBtn
             // 
-            this.button4.Location = new System.Drawing.Point(585, 605);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(170, 54);
-            this.button4.TabIndex = 31;
-            this.button4.Text = "RESET";
-            this.button4.UseVisualStyleBackColor = true;
+            this.ResetBtn.Location = new System.Drawing.Point(585, 605);
+            this.ResetBtn.Name = "ResetBtn";
+            this.ResetBtn.Size = new System.Drawing.Size(170, 54);
+            this.ResetBtn.TabIndex = 31;
+            this.ResetBtn.Text = "RESET";
+            this.ResetBtn.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // DelBtn
             // 
-            this.button3.Location = new System.Drawing.Point(406, 605);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(170, 54);
-            this.button3.TabIndex = 30;
-            this.button3.Text = "DELETE";
-            this.button3.UseVisualStyleBackColor = true;
+            this.DelBtn.Location = new System.Drawing.Point(406, 605);
+            this.DelBtn.Name = "DelBtn";
+            this.DelBtn.Size = new System.Drawing.Size(170, 54);
+            this.DelBtn.TabIndex = 30;
+            this.DelBtn.Text = "DELETE";
+            this.DelBtn.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // AddBtn
             // 
-            this.button2.Location = new System.Drawing.Point(54, 605);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(170, 54);
-            this.button2.TabIndex = 28;
-            this.button2.Text = "ADD";
-            this.button2.UseVisualStyleBackColor = true;
+            this.AddBtn.Location = new System.Drawing.Point(54, 605);
+            this.AddBtn.Name = "AddBtn";
+            this.AddBtn.Size = new System.Drawing.Size(170, 54);
+            this.AddBtn.TabIndex = 28;
+            this.AddBtn.Text = "ADD";
+            this.AddBtn.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // UpdateBtn
             // 
-            this.button1.Location = new System.Drawing.Point(232, 605);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(170, 54);
-            this.button1.TabIndex = 29;
-            this.button1.Text = "UPDATE";
-            this.button1.UseVisualStyleBackColor = true;
+            this.UpdateBtn.Location = new System.Drawing.Point(232, 605);
+            this.UpdateBtn.Name = "UpdateBtn";
+            this.UpdateBtn.Size = new System.Drawing.Size(170, 54);
+            this.UpdateBtn.TabIndex = 29;
+            this.UpdateBtn.Text = "UPDATE";
+            this.UpdateBtn.UseVisualStyleBackColor = true;
             // 
             // dataGridView1
             // 
@@ -226,11 +226,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1090, 728);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.HomeBtn);
+            this.Controls.Add(this.ResetBtn);
+            this.Controls.Add(this.DelBtn);
+            this.Controls.Add(this.AddBtn);
+            this.Controls.Add(this.UpdateBtn);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.textBox4);
@@ -273,11 +273,11 @@
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button HomeBtn;
+        private System.Windows.Forms.Button ResetBtn;
+        private System.Windows.Forms.Button DelBtn;
+        private System.Windows.Forms.Button AddBtn;
+        private System.Windows.Forms.Button UpdateBtn;
         private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
