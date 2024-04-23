@@ -127,8 +127,12 @@ namespace Shop_Management_System
                 else
                 {
                     Con.Open();
-                    string Query = "UPDATE MTBL SET MId = '" + textBox1.Text + "',MName'" + comboBox1.Text + "',Series = '" + comboBox2.Text + "',Storage = '" + textBox2.Text + "',Price ='" + textBox3.Text + "';";
-                    SqlCommand cmd = new SqlCommand(Query, Con);
+                    SqlCommand cmd = new SqlCommand("update MTBL set MName=@CN,Series=@CP,Storage=@S,Price=@P WHERE MId=@Key", Con);
+                    cmd.Parameters.AddWithValue("@CN", comboBox1.Text);
+                    cmd.Parameters.AddWithValue("@CP", comboBox2.Text);
+                    cmd.Parameters.AddWithValue("@S", textBox2.Text);
+                    cmd.Parameters.AddWithValue("@P", textBox3.Text);
+                    cmd.Parameters.AddWithValue("@Key", textBox1.Text);
                     cmd.ExecuteNonQuery();
                     Con.Close();
                     MessageBox.Show("Record Updated Successfully");
