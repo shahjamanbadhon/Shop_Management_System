@@ -144,5 +144,34 @@ namespace Shop_Management_System
             textBox3.Text = dataGridView1.SelectedRows[0].Cells[4].Value.ToString();
             textBox4.Text = dataGridView1.SelectedRows[0].Cells[5].Value.ToString();
         }
+
+        private void DelBtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (textBox1.Text == " ")
+                {
+                    MessageBox.Show("Missing Info");
+                }
+                else
+                {
+                    Con.Open();
+                    SqlCommand cmd = new SqlCommand("Delete CTBL WHERE CId=@CN", Con);
+                    cmd.Parameters.AddWithValue("@CN", textBox1.Text);
+                    cmd.ExecuteNonQuery();
+                    Con.Close();
+                    MessageBox.Show("Record Deleted Successfully");
+                    DisplayCustomer();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                Con.Close();
+            }
+        }
     }
 }

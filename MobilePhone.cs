@@ -72,21 +72,22 @@ namespace Shop_Management_System
 
         private void DelBtn_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text == " ")
-            {
-                MessageBox.Show("Enter The Mobile ID");
-            }
-            else
-            {
                 try
                 {
-                    Con.Open();
-                    string Query = "DELETE FROM MTBL WHERE Mid = '"+textBox1.Text+"';";
-                    SqlCommand cmd = new SqlCommand();
-                    cmd.ExecuteNonQuery();
-                    Con.Close();
-                    MessageBox.Show("Record Deleted Successfully");
-                    DisplayMobile();
+                    if (textBox1.Text == " ")
+                    {
+                        MessageBox.Show("Missing Info");
+                    }
+                    else
+                    {
+                        Con.Open();
+                        SqlCommand cmd = new SqlCommand("Delete MTBL WHERE Mid=@CN", Con);
+                        cmd.Parameters.AddWithValue("@CN", textBox1.Text);
+                        cmd.ExecuteNonQuery();
+                        Con.Close();
+                        MessageBox.Show("Record Deleted Successfully");
+                        DisplayMobile();
+                    }
                 }
                 catch (Exception ex)
                 {
@@ -96,7 +97,7 @@ namespace Shop_Management_System
                 {
                     Con.Close();
                 }
-            }
+            
         }
 
         private void HomeBtn_Click(object sender, EventArgs e)
