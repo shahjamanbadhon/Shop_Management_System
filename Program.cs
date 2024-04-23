@@ -16,7 +16,7 @@ namespace Shop_Management_System
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MobilePhone());
+            Application.Run(new Customer());
         }
     }
 }

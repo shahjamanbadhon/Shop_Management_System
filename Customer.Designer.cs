@@ -59,6 +59,7 @@
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(121, 28);
             this.comboBox2.TabIndex = 23;
+            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // textBox3
             // 
@@ -174,6 +175,7 @@
             this.HomeBtn.TabIndex = 32;
             this.HomeBtn.Text = "HOME";
             this.HomeBtn.UseVisualStyleBackColor = true;
+            this.HomeBtn.Click += new System.EventHandler(this.HomeBtn_Click);
             // 
             // ResetBtn
             // 
@@ -183,6 +185,7 @@
             this.ResetBtn.TabIndex = 31;
             this.ResetBtn.Text = "RESET";
             this.ResetBtn.UseVisualStyleBackColor = true;
+            this.ResetBtn.Click += new System.EventHandler(this.ResetBtn_Click);
             // 
             // DelBtn
             // 
@@ -201,6 +204,7 @@
             this.AddBtn.TabIndex = 28;
             this.AddBtn.Text = "ADD";
             this.AddBtn.UseVisualStyleBackColor = true;
+            this.AddBtn.Click += new System.EventHandler(this.AddBtn_Click);
             // 
             // UpdateBtn
             // 
@@ -210,6 +214,7 @@
             this.UpdateBtn.TabIndex = 29;
             this.UpdateBtn.Text = "UPDATE";
             this.UpdateBtn.UseVisualStyleBackColor = true;
+            this.UpdateBtn.Click += new System.EventHandler(this.UpdateBtn_Click);
             // 
             // dataGridView1
             // 
@@ -220,6 +225,7 @@
             this.dataGridView1.RowTemplate.Height = 28;
             this.dataGridView1.Size = new System.Drawing.Size(917, 259);
             this.dataGridView1.TabIndex = 27;
+            this.dataGridView1.DoubleClick += new System.EventHandler(this.dataGridView1_DoubleClick);
             // 
             // Customer
             // 
