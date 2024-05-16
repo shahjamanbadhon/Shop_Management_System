@@ -77,5 +77,76 @@ namespace Shop_Management_System
             home.Show();
             this.Hide();
         }
+
+
+
+
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+
+
+
+            FetchCus();
+
+            // Define the color for the document background
+            Color backgroundColor = Color.LightYellow;
+
+            // Calculate the size of the expanded rectangle
+            float expandWidth = e.Graphics.VisibleClipBounds.Width + 2 * e.Graphics.DpiX;
+            float expandHeight = e.Graphics.VisibleClipBounds.Height + 2 * e.Graphics.DpiY;
+
+            // Fill the expanded area with the background color
+            e.Graphics.FillRectangle(new SolidBrush(backgroundColor), -e.Graphics.DpiX, -e.Graphics.DpiY, expandWidth, expandHeight);
+
+            // Title
+            e.Graphics.DrawString("Medical Report", new Font("Century Gothic", 30, FontStyle.Bold), Brushes.Red, new Point(230, 20));
+
+            // Patient Information
+            e.Graphics.DrawString("Patient Information:", new Font("Century Gothic", 20, FontStyle.Bold), Brushes.Black, new Point(50, 80));
+
+            // Patient Name
+            e.Graphics.DrawString("Customer ID:", new Font("Century Gothic", 14, FontStyle.Regular), Brushes.Black, new Point(50, 120));
+            e.Graphics.DrawString(label14.Text, new Font("Century Gothic", 14, FontStyle.Regular), Brushes.DarkBlue, new Point(200, 120));
+
+            // Symptoms
+            e.Graphics.DrawString("Customer Name:", new Font("Century Gothic", 14, FontStyle.Regular), Brushes.Black, new Point(50, 160));
+            e.Graphics.DrawString(label13.Text, new Font("Century Gothic", 14, FontStyle.Regular), Brushes.DarkBlue, new Point(200, 160));
+
+            // Diagnosis
+            e.Graphics.DrawString("Gender:", new Font("Century Gothic", 14, FontStyle.Regular), Brushes.Black, new Point(50, 200));
+            e.Graphics.DrawString(label12.Text, new Font("Century Gothic", 14, FontStyle.Regular), Brushes.DarkBlue, new Point(200, 200));
+
+            // Medicine
+            e.Graphics.DrawString("Address:", new Font("Century Gothic", 14, FontStyle.Regular), Brushes.Black, new Point(50, 240));
+            e.Graphics.DrawString(label11.Text, new Font("Century Gothic", 14, FontStyle.Regular), Brushes.DarkBlue, new Point(200, 240));
+
+            // Date
+            e.Graphics.DrawString("Purches Mobile:", new Font("Century Gothic", 14, FontStyle.Regular), Brushes.Black, new Point(50, 280));
+            e.Graphics.DrawString(label10.Text, new Font("Century Gothic", 14, FontStyle.Regular), Brushes.DarkBlue, new Point(200, 280));
+
+            // Doctor Name
+            e.Graphics.DrawString("Bill:", new Font("Century Gothic", 14, FontStyle.Regular), Brushes.Black, new Point(50, 320));
+            e.Graphics.DrawString(label14.Text, new Font("Century Gothic", 14, FontStyle.Regular), Brushes.DarkBlue, new Point(200, 320));
+
+            /*   string summary = txtSymptoms.Text + "\n" +
+                         txtDiagmosis.Text + "\n" +
+                         txtMedicine.Text;
+
+               e.Graphics.DrawString(summary, new Font("Century Gothic", 12, FontStyle.Regular), Brushes.Black, new Point(100, 100));
+            */
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (printPreviewDialog1.ShowDialog() == DialogResult.OK)
+            {
+                printDocument1.Print();
+            }
+        }
+
+        private void printPreviewDialog1_Load(object sender, EventArgs e)
+        {
+            //  e.Graphics.DrawString(txtSummery.Text + lvl1.Text + lvl2.Text + lvl3.Text + lvl4.Text, new Font("Century Gothic", 12, FontStyle.Regular), Brushes.Black, new Point(130));
+        }
     }
 }
